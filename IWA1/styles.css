@@ -68,12 +68,16 @@ body {
     background: none;
     width: 50%;
     border-width: 0;
-    color: var(--color-light-grey);
+    color: var(--color-white);
     font-size: 3rem;
     height: 10rem;
     border-bottom: 1px solid var(--color-light-grey);
     transition: transform 0.1s;
     transform: translateY(0)
+}
+
+.counter__button:disabled{
+    opacity: 0.2;
 }
 
 .counter__button:active{
