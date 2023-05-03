@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tally Count</title>
+
+        <link rel="stylesheet" href="/styles.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="header">
+            <h1 class="hearder__title"> Tally Count</h1>
+        </header>
+
+        <aside class="controls">
+            <label>
+                <span>Display</span>
+                    <select>
+                        <option>Single</option>
+                        <option>Multiple</option>
+                    </select>
+            </label>
+
+            <label>
+                <span>Counter</span> 
+                <select>
+                    <option>counter 1</option>
+                    <option>counter 2</option>
+                    <option>counter 3</option>
+                </select>
+            </label>
+
+            <button>Settings</button>
+        </aside>
+
+        <main class ="counter">
+            <input class="counter__value" readonly value="10">
+            <div class="counter__actions">
+                <button class="counter__button 
+                counter__button_first">-</button>
+                <button class="counter__button">+</button>
+            </div>
+
+        </main>
+        <footer class="footer">
+            Inspired by <a class="footer__link" href="https://tallycount.app/">
+                Tally Count</a>. Note that this is merely a 
+                practice project for learning JS
+        </footer>
+    </body>
+</html>
