@@ -1,5 +1,5 @@
 const date = 2050
-let status = 'parent'
+let status = 'student'
 let count = 0
 
 
