@@ -11,7 +11,7 @@ const expenses = {
 }
   
 const tax = {
-    734: '3%',
+    734: '3%', 
     234: '20%',
     913: '12%',
     415: '38%',
@@ -30,8 +30,13 @@ const rent = {
 
 // You can change below however you want
 
-const taxAsDecimal = tax.913 / 100
-const startingAfterTax = salary * 1 - taxAsDecimal
-const type = lodging + size
-const balance = expenses(transport) - expenses(food) - expenses(rent.type) 
-console.log(balance)
+const taxAsDecimal = parseInt(tax[913]) / 100        // used parseInt to convert the % to a decimal number.
+
+const startingAfterTax = salary - (salary*taxAsDecimal)      // subtracting the amount of tax from the salary.
+
+/*-Used interpolation to Evaluate the values and put them inside the as a string so can be able to call it.
+ -since the key is 'large-apartment' I had start by calling size, added a dash in between then lodging so it can call it correctly.*/
+const type = `${size}-${lodging}`                 
+
+const balance = startingAfterTax - (expenses.transport + expenses.food + rent[type])  // subtracted all the expenses from the taxed salary
+console.log(balance.toFixed(2)) 
