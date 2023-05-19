@@ -8,10 +8,17 @@ const sarahBalance = '-4582.21000111'
 
 const divider = '----------------------------------'
 
+
+
+
 // Only change below this line
 
 // multiplied balances by -1 to get a positive value. 
 // Used trim() to remove the leading and trailing white space from LeoSurname and sarahName.
+
+
+// const sss = Math.abs(parseInt(sarahBalance) + parseInt(leoBalance)).toFixed(2)
+// console.log(sss)
 
 const owed = (( leoBalance * -1) + (sarahBalance* -1)).toFixed(2)
 const leo = `${leoName} ${leoSurname.trim()} (Owed : R${(leoBalance * -1).toFixed(2) })` 
