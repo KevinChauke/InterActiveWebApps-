@@ -35,7 +35,7 @@ const taxAsDecimal = parseInt(tax[913]) / 100        // used parseInt to convert
 const startingAfterTax = salary - (salary*taxAsDecimal)      // subtracting the amount of tax from the salary.
 
 /*-Used interpolation to Evaluate the values and put them inside the as a string so can be able to call it.
- -since the key is 'large-apartment' I had start by calling size, added a dash in between then lodging so it can call it correctly.*/
+ -since the key is 'large-apartment' I had to start by calling size, added a dash in between then lodging so it can call it correctly.*/
 const type = `${size}-${lodging}`                 
 
 const balance = startingAfterTax - (expenses.transport + expenses.food + rent[type])  // subtracted all the expenses from the taxed salary
