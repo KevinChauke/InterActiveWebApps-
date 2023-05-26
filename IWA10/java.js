@@ -82,8 +82,8 @@ if (isEarlier) {copied.date = correctDate} // curly brackets on the if statement
 // toLocaleDateString()
 
 console.log('ID change:', holidays[christmas].id != copied.id && copied.id)
-console.log('Name change:', holidays[christmas].name != copied.name && copied.name)  
-console.log('Date change:', holidays[christmas].date != copied.date && copied.date.toLocaleDateString())   
+console.log('Name change:', holidays[christmas].name !== copied.name && copied.name)  
+console.log('Date change:', holidays[christmas].date !== copied.date && copied.date.toLocaleDateString())   
 
 const firstHolidayTimestamp = Math.min(
     new Date (holidays[0].date).getTime(),
@@ -110,15 +110,21 @@ const lastHolidayTimestamp = Math.max(
 )
 
 
-//  .................................could't finish up this part.............................
 
-// const firstDay = firstHolidayTimestamp.getDate()
-// const firstMonth = firstHolidayTimestamp.getMonth()
-// const lastDay = lastHolidayTimestamp.getDate()
-// const lastMonth = lastHolidayTimestamp.getMonth()
 
-console.log(`${firstDay}/${firstMonth}/${currentYear}`)
+const firstDay = new Date (firstHolidayTimestamp).getDate()
+const firstMonth = new Date (firstHolidayTimestamp).getMonth() +1
+const lastDay =  new Date (lastHolidayTimestamp).getDate()
+const lastMonth = new Date (lastHolidayTimestamp).getMonth() +1
+
+console.log(`0${firstDay}/0${firstMonth}/${currentYear}`)
 console.log(`${lastDay}/${lastMonth}/${currentYear}`)
 
-const randomHoliday = holidays[Math.random]
-console.log(randomHoliday.date)
+
+const randomHoliday = holidays[Math.round(Math.random() * 9)].date
+const randomDay = randomHoliday.getDate()
+const randomMonth = randomHoliday.getMonth() + 1
+console.log(`${randomDay}/${randomMonth}/${currentYear}`)
+
+// const randomHoliday = holidays[Math.random]
+// console.log(randomHoliday.date)
