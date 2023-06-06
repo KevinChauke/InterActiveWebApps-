@@ -32,3 +32,14 @@ biscuits3.innerHTML= root3.dataset.biscuits;
 donuts3.innerHTML = root3.dataset.donuts;
 pancakes3.innerHTML = root3.dataset.pancakes;
 status3.innerHTML = root3.dataset.delivered ==="true" ? "Delivered" : "Pending";
+
+
+// const html = {
+//     orders: {
+//         1: {
+//             root: document.querySelector('[data-key="order1"]'),
+//             biscuits: document.querySelector('[data-key="order1"] .biscuits .count'),
+//             donuts: document.querySelector('[data-key="order1"] .donuts .count'),
+//             pancakes: document.querySelector('[data-key="order1"] .pancakes .count'),
+//             status: document.querySelector('[data-key="order1"] .status dd')
+//         },
