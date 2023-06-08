@@ -27,7 +27,7 @@ const checkUser = () => {
 }
 
 
-// the below lines are used to call the function
+// the below lines are used to call the functions
 // Only allowed to change code above
 
 checkUser()
