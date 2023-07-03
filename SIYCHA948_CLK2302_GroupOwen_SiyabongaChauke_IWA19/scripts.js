@@ -10,7 +10,7 @@ const range = [0, BOOKS_PER_PAGE];
 if (!books || !Array.isArray(books)) throw new Error('Source required') 
 if (!range || range.length < 2) throw new Error('Range must be an array with two numbers')
 
-// I created an object for the themes so that I can be able to change the theme from dark to light.
+// I created an object for the themes for improved readability.
 const themeColor = {
     day : {
         dark: '10, 10, 20',
